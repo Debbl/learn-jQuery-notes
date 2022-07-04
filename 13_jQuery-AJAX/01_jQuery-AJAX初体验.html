@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        // GET
+        // $.ajax({
+        //   url: 'http://httpbin.org/get1',
+        //   method: 'GET',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        //   error: function (xhr) {
+        //     console.log('err', xhr);
+        //   },
+        // });
+
+        // POST
+        // $.ajax({
+        //   url: 'http://httpbin.org/post',
+        //   method: 'POST',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // PUT
+        // $.ajax({
+        //   url: 'http://httpbin.org/put',
+        //   method: 'PUT',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // DELETE
+        $.ajax({
+          url: 'http://httpbin.org/delete',
+          method: 'DELETE',
+          dataType: 'json',
+          success: function (data) {
+            console.log(data);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

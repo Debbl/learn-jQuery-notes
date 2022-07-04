@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./js/utils.js"></script>
+    <script src="../libs/jquery-3.6.0.js"></script>
+
+    <script>
+      console.log($);
+      console.log(jQuery);
+      // jQuery.noConflict();
+      // 给 jQuery 重新赋值一个新值,避免和其他的变量冲突
+      var newjQuery = jQuery.noConflict(true);
+      console.log($);
+      console.log(jQuery);
+      console.log(newjQuery);
+    </script>
+  </body>
+</html>

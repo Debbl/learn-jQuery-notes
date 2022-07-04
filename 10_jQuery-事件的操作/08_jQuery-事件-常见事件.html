@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="li-1">li-1</li>
+      <li class="li-2">li-2</li>
+      <li class="li-3">li-3</li>
+      <li class="li-4">li-4</li>
+      <li class="li-5">li-5</li>
+    </ul>
+    <input type="text" />
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        // mouseenter mouseleave
+        // $('ul').hover(
+        //   function () {
+        //     console.log('ul hover');
+        //   },
+        //   function () {
+        //     console.log('ul leave');
+        //   }
+        // );
+
+        // 浏览器 resize 事件
+        // $(window).resize(function () {
+        //   console.log('resize');
+        // });
+
+        // 表单事件
+        $('input').focus(function () {
+          console.log('input focus');
+        });
+        $('input').blur(function () {
+          console.log('input blur');
+        });
+        $('input').change(function () {
+          console.log(this.value);
+        });
+        $('input').on('input', function () {
+          console.log($(this).val());
+        });
+      });
+    </script>
+  </body>
+</html>

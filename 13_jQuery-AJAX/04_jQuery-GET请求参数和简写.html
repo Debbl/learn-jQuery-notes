@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        // url 查询字符串
+        // $.ajax({
+        //   url: 'http://httpbin.org/get?name=de&age=18',
+        //   method: 'GET',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // data 中提交参数
+        // $.ajax({
+        //   url: 'http://httpbin.org/get',
+        //   method: 'GET',
+        //   data: {
+        //     name: 'de',
+        //     age: 18,
+        //   },
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // get 添加 headers
+        // $.ajax({
+        //   url: 'http://httpbin.org/get',
+        //   method: 'GET',
+        //   data: {
+        //     name: 'de',
+        //     age: 18,
+        //   },
+        //   headers: {
+        //     accessToken: 'token-------------------',
+        //   },
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // 简写
+        $.get('http://httpbin.org/get')
+          .then(function (data) {
+            console.log(data);
+          })
+          .catch(function (err) {
+            console.log(err);
+          })
+          .always(function () {
+            // finally
+            console.log('always');
+          });
+      });
+    </script>
+  </body>
+</html>

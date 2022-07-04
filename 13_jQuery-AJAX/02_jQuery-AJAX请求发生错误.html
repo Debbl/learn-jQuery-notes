@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        // 500 后台代码异常
+        // $.ajax({
+        //   url: 'http://httpbin.org/status/500',
+        //   method: 'POST',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        //   error: function (xhr) {
+        //     console.log(xhr.statusText);
+        //   },
+        // });
+
+        // 503 服务器维护
+        // $.ajax({
+        //   url: 'http://httpbin.org/status/503',
+        //   method: 'POST',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        //   error: function (xhr) {
+        //     console.log(xhr.status);
+        //     console.log(xhr.statusText);
+        //   },
+        // });
+
+        // 403 没有权限获取资源
+        // $.ajax({
+        //   url: 'http://httpbin.org/status/403',
+        //   method: 'POST',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        //   error: function (xhr) {
+        //     console.log(xhr.status);
+        //     console.log(xhr.statusText);
+        //   },
+        // });
+
+        // 404 资源路径 错误
+        $.ajax({
+          url: 'http://httpbin.org/status/404',
+          method: 'POST',
+          success: function (data) {
+            console.log(data);
+          },
+          error: function (xhr) {
+            console.log(xhr.status);
+            console.log(xhr.statusText);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

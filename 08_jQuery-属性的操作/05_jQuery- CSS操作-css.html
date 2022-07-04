@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="li-1">li-111</li>
+      <li class="li-2">li-2</li>
+      <li class="li-3">li-3</li>
+      <li class="li-4">li-4</li>
+      <li class="li-5">li-5 <span>我是span</span></li>
+    </ul>
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        // 1. 获取元素的宽
+        console.log($('ul').css('height'));
+        console.log($('ul').css('width'));
+        console.log(
+          $('ul').css(['width', 'height', 'border', 'background-color'])
+        );
+        // 2. 设置属性
+        $('ul').css('width', '300px');
+        $('ul').css({
+          height: '300px',
+          'background-color': 'skyblue',
+          'box-sizing': 'border-box',
+        });
+        $('ul li').css('color', 'green').even().css({
+          color: 'red',
+        });
+      });
+    </script>
+  </body>
+</html>

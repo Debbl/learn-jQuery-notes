@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        overflow: hidden;
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="hidden">隐藏</button>
+    <button class="show">显示</button>
+
+    <div class="box">box</div>
+
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        $('.hidden').click(function () {
+          $('.box').animate(
+            {
+              height: 'toggle',
+              opacity: 'toggle',
+            },
+            {
+              duration: 5000,
+              easing: 'linear',
+              complete: function () {
+                console.log('OKK');
+              },
+            }
+          );
+        });
+
+        $('.show').click(function () {
+          $('.box').animate(
+            {
+              height: '100px',
+              opacity: 1,
+            },
+            1000,
+            'linear',
+            function () {
+              console.log('OK');
+            }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

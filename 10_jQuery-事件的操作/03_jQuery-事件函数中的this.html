@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="li-1">li-1</li>
+      <li class="li-2">li-2</li>
+      <li class="li-3">li-3</li>
+      <li class="li-4">li-4</li>
+      <li class="li-5">li-5</li>
+    </ul>
+
+    <button class="cancel-btn">取消事件监听</button>
+    <script src="../libs/jquery-3.6.0.js"></script>
+
+    <script>
+      /*
+        this -> DOM Element
+      */
+      // $('ul').on('click.click-name1', function () {
+      //   console.log('ul click');
+      //   console.log('this: ', this);
+      // });
+      // $('ul').click(function () {
+      //   console.log('click');
+      // });
+
+      // $('.cancel-btn').click(function () {
+      //   $('ul').off('click.click-name1');
+      // });
+
+      // $('ul li').click(function () {
+      //   console.log(this);
+      // });
+
+      var lisEls = $('ul li').get();
+      for (var i = 0; i < lisEls.length; i++) {
+        lisEls[i].addEventListener('click', function () {
+          console.log(this);
+          console.log($(this));
+        });
+      }
+    </script>
+  </body>
+</html>

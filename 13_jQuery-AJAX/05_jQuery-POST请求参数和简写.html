@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        // url 查询字符串
+        // $.ajax({
+        //   url: 'http://httpbin.org/post?name=de&age=18',
+        //   method: 'POST',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // data 中提交参数
+        // $.ajax({
+        //   url: 'http://httpbin.org/post',
+        //   method: 'POST',
+        //   data: {
+        //     name: 'de',
+        //     age: 18,
+        //   },
+        //   // contentType: 'application/json',
+        //   contentType: 'application/x-www-form-urlencoded',
+        //   dataType: 'json',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // post 使用 JSON
+        // $.ajax({
+        //   url: 'http://httpbin.org/post',
+        //   method: 'POST',
+        //   data: JSON.stringify({
+        //     name: 'de',
+        //     age: 18,
+        //   }),
+        //   contentType: 'application/json',
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // data 中 formData
+        // var formData = new FormData();
+        // formData.append('name', 'de');
+        // formData.append('age', 18);
+        // $.ajax({
+        //   url: 'http://httpbin.org/post',
+        //   method: 'POST',
+        //   data: formData,
+        //   processData: false,
+        //   contentType: false,
+        //   headers: {
+        //     accessToken: 'token----------',
+        //   },
+        //   success: function (data) {
+        //     console.log(data);
+        //   },
+        // });
+
+        // 简写
+        $.post('http://httpbin.org/post', {
+          name: 'de',
+          age: 18,
+        }).then(function (data) {
+          console.log(data);
+        });
+      });
+    </script>
+  </body>
+</html>

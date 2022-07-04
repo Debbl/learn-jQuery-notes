@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: #f00;
+        text-align: center;
+      }
+      .box .content {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-color: #0ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="content"></div>
+    </div>
+    <script src="../libs/jquery-3.6.0.js"></script>
+
+    <script>
+      $(function () {
+        $('.box').click(function () {
+          console.log('box click');
+        });
+        $('.content').click(function () {
+          console.log('content click');
+        });
+        $('body').click(function () {
+          console.log('body click');
+        });
+      });
+    </script>
+  </body>
+</html>

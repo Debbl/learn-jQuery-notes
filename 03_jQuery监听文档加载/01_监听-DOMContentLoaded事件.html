@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../libs/jquery-3.6.0.js"></script>
+
+    <script>
+
+      // 当纯 HTML 被完全加载以及解析时，DOMContentLoaded 事件会被触发，而不必等待样式表，图片或者子框架完成加载。
+
+      var $doc = $(document);
+
+      // 方式一 监听文档完全加载完成
+      // $doc.ready(function () {
+      //   console.log('1 doc ready');
+      // });
+
+      // 方式二
+      // $(document).ready(function () {
+      //   console.log('2 doc ready');
+      // });
+
+      // 方式三
+      // $().ready(function () {
+      //   console.log('3 doc ready');
+      // });
+
+      // 方式四 推荐
+      $(function () {
+        console.log('4 doc ready');
+      });
+    </script>
+  </body>
+</html>

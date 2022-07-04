@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="https://avatars.githubusercontent.com/u/61053131?s=40&v=4"
+      alt=""
+    />
+    <script src="../libs/jquery-3.6.0.js"></script>
+
+    <script>
+      // 全部资源加载完成 图片
+      // 当整个页面及所有依赖资源如样式表和图片都已完成加载时，将触发 load 事件。
+
+      $(window).on('load', function () {
+        console.log('图片加载完成...');
+      });
+    </script>
+  </body>
+</html>

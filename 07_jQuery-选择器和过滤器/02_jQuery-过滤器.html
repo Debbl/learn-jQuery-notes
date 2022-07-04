@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="li-1">li-1</li>
+      <li class="li-2">li-2</li>
+      <li class="li-3">li-3</li>
+      <li class="li-4">li-4</li>
+      <li class="li-5">li-5</li>
+    </ul>
+    <script src="../libs/jquery-3.6.0.js"></script>
+
+    <script>
+      $(function () {
+        // 1. eq()
+        // console.log($('ul li').eq(0));
+
+        // 2. first()
+        // console.log($('ul li').first());
+
+        // 3. last()
+        // console.log($('ul li').last());
+
+        // 4. not()
+        // console.log($('ul li').not('.li-1, .li-5'));
+
+        // 5. odd() 奇数 even() 偶数
+        // console.log($('ul li').odd());
+
+        // 6. filter()
+        // console.log($('ul li').filter('.li-5'));
+        // console.log($('ul li').filter('.li-5, .li-4'));
+
+        // 6. 链式调用
+        console.log($('ul li').not('.li-5').filter('.li-3').eq(0));
+      });
+    </script>
+  </body>
+</html>
